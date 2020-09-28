@@ -1,0 +1,50 @@
+h1{
+  color: var(--primary-colour);
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  max-width: 900px;
+  margin: 0 auto;
+
+  text-align: center;
+  border-bottom: 1px solid var(--primary-colour);
+  padding: 25px 0;
+}
+
+div{
+  display: flex;
+  align-items: flex-end;
+}
+
+div a:nth-child(2){
+  margin-left: 25px;
+  padding-bottom: 4px;
+}
+
+.cart{
+  padding-bottom: 4px;
+}
+
+a{
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-colour);
+  transition: color .5s ease;
+}
+
+a:hover{
+  color: var(--tertiary-colour);
+}
+
+.active{
+  color: var(--tertiary-colour);
+  transition: color .5s ease;
+}
+
+.active:hover{
+  color: var(--primary-colour);
+}

@@ -1,0 +1,29 @@
+<main>
+  <div class="header"> 
+    <h2>Produtos</h2> 
+    <div>
+      <label for="filterTx">Filtro/Ordenação</label>
+      <input type="text" name="filterTx" id="filterTx" [(ngModel)]="filter">
+      <select id="ab" [(ngModel)]="orderBy">
+        <option value="high-price">Maiores preços</option>
+        <option value="low-price">Menores preços</option>
+      </select>
+    </div>
+  </div>
+  <div class="container" fxLayout="row wrap" fxLayoutAlign="space-between center" *ngIf="!filteredEmpty" >
+    <div *ngFor="let product of filteredProducts |  paginate: { itemsPerPage: count, currentPage: pag }" fxFlex="30%">
+      <div class="card" >
+        <img [src]="product.imageUrl" alt="{{product.name}}">
+        <div class="card-info">
+          <strong>{{product.name}}</strong>
+          <p class="price">R$ {{product.price | formatBRL }}</p>
+        </div>
+        <a class="buy" (click)="addToCart(product)">Adicionar ao carrinho</a>
+      </div>
+    </div>
+    <div class="pag-control">
+      <pagination-controls class="pagination" (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo" autoHide="true" responsive="true"></pagination-controls>
+    </div>
+  </div>
+  <div *ngIf="filteredEmpty">Nenhum resultado!</div>
+</main>

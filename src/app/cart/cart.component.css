@@ -1,0 +1,100 @@
+main{
+  max-width: 900px;
+  margin: 0 auto;
+}
+h2{
+  margin: 25px 0;
+  color: var(--secondary-colour);
+}
+
+table{
+  width:100%;
+  border-spacing: 0px;
+
+}
+
+th{
+  text-align: start;
+  font-size: 1.2rem;
+  color: var(--secondary-colour);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--primary-colour);
+  border-top: 1px solid var(--primary-colour);
+}
+tr:nth-child(even){
+  background: var(--secondary-background);
+}
+tr:last-child{
+  background-color: var(--primary-background);
+}
+img{
+  height: 75px;
+}
+.amount{
+  max-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.amount button{
+  width: 25px;
+  height: 25px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--secondary-colour);
+  transition: background .5s ease;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.amount button:hover{
+  background-color: var(--tertiary-colour);
+}
+
+.remove{
+  height: 25px;
+  padding: 0 10px;
+  color: white;
+  background-color: var(--secondary-colour);
+  transition: background .5s ease;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove:hover{
+  background-color: var(--tertiary-colour);
+}
+
+#amountTotal{
+  padding-left: 45px;
+}
+
+.checkout{
+  padding: 25px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+.checkout button{
+  width: 200px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--secondary-colour);
+  transition: background .5s ease;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout button:hover{
+  background-color: var(--tertiary-colour);
+}
